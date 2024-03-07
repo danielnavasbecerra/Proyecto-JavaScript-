@@ -12,17 +12,26 @@
 }
 
 *::-webkit-scrollbar {
-    width: 11px;              /* width of the entire scrollbar */
+    width: 11px;
+    /* width of the entire scrollbar */
 }
 
 *::-webkit-scrollbar-track {
-    background: var(--bs-dark-bg-subtle);     /* color of the tracking area */
+    background: var(--bs-dark-bg-subtle);
+    /* color of the tracking area */
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--bs-body-color);     /* color of the scroll thumb */
-    border-radius: 20px;           /* roundness of the scroll thumb */
-    border: 3px solid var(--bs-dark-bg-subtle);    /* creates padding around scroll thumb */
+    background-color: var(--bs-body-color);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid var(--bs-dark-bg-subtle);
+    /* creates padding around scroll thumb */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -49,13 +58,51 @@ h4 {
     color: var(--bs-emphasis-color);
 }
 
+/* Scroll to Top */
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 65px;
+    width: 65px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(222, 226, 230, .2);
+    cursor: pointer;
+    z-index: 100;
+    animation: show .5s forwards;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: var(--bs-body-color);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    color: var(--bs-dark-bg-subtle);
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
 /* Animation Particles */
 
 #particles-js {
     width: 100%;
     height: 150vh;
     position: fixed;
-  }
+}
 
 /* Layout for admin dashboard skeleton */
 
@@ -179,7 +226,7 @@ a.sidebar-link {
     width: 100%;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
 }
 
