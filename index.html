@@ -28,7 +28,7 @@
                         Homepage
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="#" id="link-home" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
                             Home
                         </a>
@@ -38,17 +38,17 @@
                         Information
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#information" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#information"
+                            data-bs-toggle="collapse" aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
                             Information
                         </a>
                         <ul id="information" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">
+                                <a href="#" id="link-periods" class="sidebar-link">
                                     Periods</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Programs</a>
+                                <a href="#" id="link-programs" class="sidebar-link">Programs</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">Rates</a>
@@ -69,8 +69,8 @@
                         Management
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#management" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#management"
+                            data-bs-toggle="collapse" aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
                             User Management
                         </a>
                         <ul id="management" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
@@ -83,8 +83,9 @@
                         </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#management-1" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>Academic Management</a>
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#management-1"
+                            data-bs-toggle="collapse" aria-expanded="false"><i
+                                class="fa-solid fa-share-nodes pe-2"></i>Academic Management</a>
                         <ul id="management-1" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">Subjects</a>
@@ -132,99 +133,8 @@
                     </ul>
                 </div>
             </nav>
-            <main class="content px-3 py-2">
-                <div class="container-fluid">
-                    <div class="mb-3">
-                        <h4>The Sages</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6 d-flex">
-                            <div class="card flex-fill border-0 illustration">
-                                <div class="card-body p-0 d-flex flex-fill">
-                                    <div class="row g-0 w-100">
-                                        <div class="col-6">
-                                            <div class="p-3 m-1">
-                                                <h4>Welcome Back, the best university website</h4>
-                                                <p class="mb-0">Admin Dashboard, on all University Data</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 align-self-end text-end">
-                                            <img src="IMG/admin.png" class="img-fluid illustration-img"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 d-flex">
-                            <div class="card flex-fill border-0">
-                                <div class="card-body py-4">
-                                    <div class="d-flex align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h4 class="mb-2">
-                                                + 100.000
-                                            </h4>
-                                            <p class="mb-2">
-                                                More Than One Hundred Thousand Students Enrolled
-                                            </p>
-                                            <div class="mb-0">
-                                                <span class="badge text-success me-2">
-                                                    +10.0%
-                                                </span>
-                                                <span class="text-muted">
-                                                    Since Last Month
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Table Element -->
-                    <div class="card border-0">
-                        <div class="card-header">
-                            <h5 class="card-title">
-                                EJEMPLO PARA LISTAR
-                            </h5>
-                            <h6 class="card-subtitle text-muted">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ducimus,
-                                necessitatibus reprehenderit itaque!
-                            </h6>
-                        </div>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td colspan="2">Larry the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+            <main id="main-container" class="content px-3 py-2">
+                
             </main>
             <a href="#" class="theme-toggle">
                 <i class="fa-regular fa-moon"></i>
@@ -252,7 +162,7 @@
                                     <a href="#" class="text-muted">Terms</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="text-muted">Booking</a>
+                                    <a href="https://www.techiedelight.com/es/run-javascript-code-on-page-load/" class="text-muted">Booking</a>
                                 </li>
                             </ul>
                         </div>
@@ -266,6 +176,16 @@
     <!-- Scripts(Functionalities) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/app.js"></script>
+    <script src="JS/1_periods.js"></script>
+    <script src="JS/2_programs.js"></script>
+    <script src="JS/3_rates.js"></script>
+    <script src="JS/4_departments.js"></script>
+    <script src="JS/5_classrooms.js"></script>
+    <script src="JS/6_courses.js"></script>
+    <script src="JS/7_students.js"></script>
+    <script src="JS/8_teachers.js"></script>
+    <script src="JS/9_subjects.js"></script>
+    <script src="JS/10_enrollment.js"></script>
 
     <!-- stats.js lib (Animation Particles) -->
     <script src="JS/particles.min.js"></script>
