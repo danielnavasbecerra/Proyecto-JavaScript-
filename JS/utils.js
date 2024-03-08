@@ -10,7 +10,7 @@ function resetMain(link) {
 }
 
 // Funcion que Contiene la Pagina(Home)
-function showHome(){
+function showHome() {
     const mainHome = document.getElementById("main-container");
     mainHome.innerHTML = `<div id="page-home" class="container-fluid">
             <div class="mb-3">
@@ -59,50 +59,7 @@ function showHome(){
                     </div>
                 </div>
             </div>
-            <!-- Table Element -->
-            <div class="card border-0">
-                <div class="card-header">
-                    <h5 class="card-title">
-                        EJEMPLO PARA LISTAR
-                    </h5>
-                    <h6 class="card-subtitle text-muted">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ducimus,
-                        necessitatibus reprehenderit itaque!
-                    </h6>
-                </div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-    </div>`
+        </div>`
 }
 
 // Funcion que al presionar la Opcion Home 
@@ -113,47 +70,61 @@ function resetHome() {
         showHome();
     });
 }
-
-
 resetHome()
-
-window.addEventListener('load', pageHome)
+window.addEventListener('load', showHome)
 
 
 // json functions
-async function load(url){
-    try{
+async function load(url) {
+    try {
         let returnList = [];
         const response = await fetch(`http://localhost:3000/${url}`);
-        if(!response.ok){
-            throw new Error(`Error to load ${url} state:`,response.status);
+        if (!response.ok) {
+            throw new Error(`Error to load ${url} state:`, response.status);
         }
         returnList = await response.json();
         return returnList;
-    }catch(error){
-        console.error(`error to load the ${url}`,error.message);
+    } catch (error) {
+        console.error(`error to load the ${url}`, error.message);
     }
 }
 
 
 
 //html functions
-
-function createCard(dataDic){//pass a dictionary to a card
+function createCard(dataDic, nameList) {//pass a dictionary to a card
+    
     let cardHTMl = `
-    <div class="col">
-        <div class="card">
-            <div class="card-body">
-                
+    <div class="card border-0">
+        <div class="card-header">
+            <h5 class="card-title">
+                List Of ${nameList}
+            </h5>
+            <h6 class="card-subtitle text-muted">
+                Below you can see the list of the current ${nameList}
+            </h6>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
     `;
 
-    for(let key in dataDic){
-        if(key === "id"){
-            cardHTMl += `<h5 class="card-title">ID: ${dataDic["id"]}</h5>
-            <ul class="list-group">`;
+    for (let key in dataDic) {
+        if (key === "id") {
+            cardHTMl += `<th scope="col"># ID</th>
+            
+            // <h6 class="card-subtitle text-muted"># ID: ${dataDic["id"]}</h6>
+            // <ul class="list-group">`;
         }
-        else{
-            cardHTMl += `<li class="list-group-item">${key.replace("_"," ")}: ${dataDic[key]}</li>`;
+        else {
+            cardHTMl += `<th scope="col">${key.replace("_", " ").toUpperCase()}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">${dataDic["id"]}</th>
+            // <li class="list-group-item">${key.replace("_", " ").toUpperCase()}: ${dataDic[key]}</li>`;
         }
     }
 
@@ -164,12 +135,4 @@ function createCard(dataDic){//pass a dictionary to a card
     </div>
     `;
     return cardHTMl;
-}
-
-function initialState(){
-    const container = document.getElementById("main-container");
-    const divs = container.getElementsByTagName("div");
-    for(let i = 0; i < divs.length; i++){
-        divs[i].innerHTML = "";
-    }
 }

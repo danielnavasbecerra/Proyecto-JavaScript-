@@ -3,8 +3,14 @@
         {
             "id": 1,
             "codigo": "P24-01",
-            "ano": 2024,
+            "año": 2024,
             "semestre": 1
+        },
+        {
+            "id": 2,
+            "codigo": "P24-02",
+            "año": 2024,
+            "semestre": 2
         }
     ],
     "programas": [
@@ -17,6 +23,46 @@
             "id": 2,
             "nombre": "Ingeniería de Mecatronica",
             "nivel": "Pregrado"
+        },
+        {
+            "id": 3,
+            "nombre": "Medicina",
+            "nivel": "pregrado"
+        },
+        {
+            "id": 4,
+            "nombre": "Administración de Empresas",
+            "nivel": "pregrado"
+        },
+        {
+            "id": 5,
+            "nombre": "Psicología",
+            "nivel": "pregrado"
+        },
+        {
+            "id": 6,
+            "nombre": "Doctorado en Ciencias de la Computación",
+            "nivel": "postgrado"
+        },
+        {
+            "id": 7,
+            "nombre": "Maestría en Marketing Digital",
+            "nivel": "postgrado"
+        },
+        {
+            "id": 8,
+            "nombre": "Máster en Finanzas",
+            "nivel": "Postgrado"
+        },
+        {
+            "id": 9,
+            "nombre": "Doctorado en Ingeniería Civil",
+            "nivel": "Postgrado"
+        },
+        {
+            "id": 10,
+            "nombre": "Maestría en Administración de Empresas",
+            "nivel": "Postgrado"
         }
     ],
     "tarifas": [
