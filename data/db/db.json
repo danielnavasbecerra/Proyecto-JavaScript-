@@ -27,27 +27,27 @@
         {
             "id": 3,
             "nombre": "Medicina",
-            "nivel": "pregrado"
+            "nivel": "Pregrado"
         },
         {
             "id": 4,
             "nombre": "Administración de Empresas",
-            "nivel": "pregrado"
+            "nivel": "Pregrado"
         },
         {
             "id": 5,
             "nombre": "Psicología",
-            "nivel": "pregrado"
+            "nivel": "Pregrado"
         },
         {
             "id": 6,
             "nombre": "Doctorado en Ciencias de la Computación",
-            "nivel": "postgrado"
+            "nivel": "Postgrado"
         },
         {
             "id": 7,
             "nombre": "Maestría en Marketing Digital",
-            "nivel": "postgrado"
+            "nivel": "Postgrado"
         },
         {
             "id": 8,

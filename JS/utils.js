@@ -1,3 +1,4 @@
+
 // Funcion para Vaciar el Contenedor(Main)
 function resetMain(link) {
     //ID del Boton de la Seccion
@@ -74,6 +75,15 @@ resetHome()
 window.addEventListener('load', showHome)
 
 
+// Intentar no recargar pagina
+function preventReloadForm(){
+    document.querySelector("form").addEventListener("submit",function(event){
+        event.preventDefault();
+    })
+};
+
+
+
 // json functions
 async function load(url) {
     try {
@@ -89,11 +99,27 @@ async function load(url) {
     }
 }
 
+async function save(newUser,url){
+    try{
+        const response = await fetch(`http://localhost:3000/${url}`,{
+            method:"POST",
+            headers:{"Content-type":"application/json"},
+            body: JSON.stringify(newUser)
+        });
+        if(!response.ok){
+            throw new Error(`Error to load ${url}. state:`,response.status);
+        }
+        const createdUser = await response.json();
+        console.log("created ${url}:",createdUser);
+    }catch(error){
+        console.error(`error to load the ${url}`,error.message);
+    }
+}
 
 
 //html functions
-function createCard(dataDic, nameList) {//pass a dictionary to a card
-    
+function createCard(nameList) {//pass a dictionary to a card
+    // Diseño de Lista
     let cardHTMl = `
     <div class="card border-0">
         <div class="card-header">
@@ -107,32 +133,47 @@ function createCard(dataDic, nameList) {//pass a dictionary to a card
         <div class="card-body">
             <table class="table">
                 <thead>
-                    <tr>
-    `;
-
-    for (let key in dataDic) {
-        if (key === "id") {
-            cardHTMl += `<th scope="col"># ID</th>
-            
-            // <h6 class="card-subtitle text-muted"># ID: ${dataDic["id"]}</h6>
-            // <ul class="list-group">`;
-        }
-        else {
-            cardHTMl += `<th scope="col">${key.replace("_", " ").toUpperCase()}</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">${dataDic["id"]}</th>
-            // <li class="list-group-item">${key.replace("_", " ").toUpperCase()}: ${dataDic[key]}</li>`;
-        }
-    }
-
-    cardHTMl += `
-                </ul>
-            </div>
+                    <tr id="data_key">
+                    </tr>
+                </thead>
+                <tbody id="data_value">
+                </tbody>
         </div>
-    </div>
-    `;
+    </div>`;
+
     return cardHTMl;
+}
+
+// Lista de objetos(JSON) para listar
+function objectList(dataDic) {
+    for (let key in dataDic) {
+        selectKey(dataDic[key])
+        selectValue(dataDic)
+    }
+}
+// Funcion para Seleccionar Las KEYS
+function selectKey(data) {
+    let body = ''
+    for (let key in data) {
+        body += `<th scope="row">${key.toUpperCase()}</th>`
+    }
+    document.getElementById('data_key').innerHTML = body
+}
+// Funcion para Seleccionar Los VALUES
+function selectValue(data) {
+    let body = ''
+    for (let i = 0; i < data.length; i++) {
+        body += `<tr>`
+        for (let key in data[i]) {
+            if (key === "id") {
+                body += `<th scope="row">${data[i]["id"]}</th>`;
+            }
+            else {
+                body += `<td>${data[i][key]}</td>`;
+            }
+            // console.log(data[i][key])
+        }
+        body += `</tr>`
+    }
+    document.getElementById('data_value').innerHTML = body
 }

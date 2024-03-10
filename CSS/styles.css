@@ -57,6 +57,9 @@ h4 {
     font-size: 1.275rem;
     color: var(--bs-emphasis-color);
 }
+/* i {
+    font-size: x-large;
+} */
 
 /* Scroll to Top */
 #progress {
@@ -131,6 +134,12 @@ h4 {
 }
 
 /* Sidebar Elements Style */
+.subLista{
+    margin-left: 1rem;
+}
+.subList{
+    margin-left: 2rem;
+}
 
 .sidebar-logo {
     padding: 1.15rem;
