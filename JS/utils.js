@@ -17,6 +17,25 @@ function showHome() {
             <div class="mb-3">
                 <h4>The Sages</h4>
             </div>
+            <div>
+                <div class="col-12 col-md-6 d-flex" style="
+                width: 100%">
+                    <div class="card flex-fill border-0 illustration">
+                        <div class="card-body p-0 d-flex flex-fill">
+                            <div  id="img_home" class="row g-0 w-100">
+                                <div class="col-6">
+                                    <div id="text" class="p-3 m-1">
+                                        <h4>Welcome Back, the best university website</h4>
+                                    </div>
+                                    <div id="text" class="col-6 align-self-end text-end">
+                                        <img src="IMG/admin.png" class="img-fluid illustration-img" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12 col-md-6 d-flex">
                     <div class="card flex-fill border-0 illustration">
@@ -75,14 +94,6 @@ resetHome()
 window.addEventListener('load', showHome)
 
 
-// Intentar no recargar pagina
-function preventReloadForm(){
-    document.querySelector("form").addEventListener("submit",function(event){
-        event.preventDefault();
-    })
-};
-
-
 
 // json functions
 async function load(url) {
@@ -99,20 +110,20 @@ async function load(url) {
     }
 }
 
-async function save(newUser,url){
-    try{
-        const response = await fetch(`http://localhost:3000/${url}`,{
-            method:"POST",
-            headers:{"Content-type":"application/json"},
+async function save(newUser, url) {
+    try {
+        const response = await fetch(`http://localhost:3000/${url}`, {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
             body: JSON.stringify(newUser)
         });
-        if(!response.ok){
-            throw new Error(`Error to load ${url}. state:`,response.status);
+        if (!response.ok) {
+            throw new Error(`Error to load ${url}. state:`, response.status);
         }
         const createdUser = await response.json();
-        console.log("created ${url}:",createdUser);
-    }catch(error){
-        console.error(`error to load the ${url}`,error.message);
+        console.log("created ${url}:", createdUser);
+    } catch (error) {
+        console.error(`error to load the ${url}`, error.message);
     }
 }
 

@@ -207,6 +207,24 @@ a.sidebar-link {
     margin-left: auto;
 }
 
+#img_home{
+    background-image: url(../IMG/fondo_home.jpg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    opacity: .6;
+}
+
+#text {
+    position: relative;
+    z-index: -1000;
+    opacity: 0;
+}
+#text img{
+    opacity: 0;
+}
+
 .content {
     flex: 1;
     max-width: 100vw;
