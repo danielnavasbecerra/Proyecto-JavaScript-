@@ -10,7 +10,21 @@ document.getElementById('link-classrooms').addEventListener('click', showClassro
 // Profesores:
 //Listar
 document.getElementById('list-teachers').addEventListener('click', showTeachers);
+//Formulario
+document.getElementById('form-teachers').addEventListener('click', newTeacherForm)
 
 // Alumnos:
 //Listar
 document.getElementById('list-students').addEventListener('click', showStudents);
+//Formulario
+document.getElementById('form-students').addEventListener('click', newStudentForm)
+
+// Subjects:
+document.getElementById('list-subjects').addEventListener('click', showSubjects);
+// document.getElementById("nav-subjects").addEventListener("click",subjectOptions);
+// document.getElementById("form-subjects").addEventListener("click",newSubjectForm);
+
+// Enrollment:
+document.getElementById('list-enrollment').addEventListener("click", showEnrollment);
+// document.getElementById("nav-enrollment").addEventListener("click",tuitionOptions);
+// document.getElementById("new-enrollment").addEventListener("click",newTuitionForm);
