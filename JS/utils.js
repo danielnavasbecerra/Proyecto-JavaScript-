@@ -236,9 +236,17 @@ function objectSelect(dataDic) {
     console.log("data")
     let body = ''
     for (let i = 0; i < dataDic.length; i++) {
-        body += `<option value="${dataDic[i].id}">${dataDic[i].id}-${dataDic[i].nombre}</option>`;
+        body += `<option value="${dataDic[i].id}">${dataDic[i].id}`;
+        if (dataDic[i].nombre){
+            body += `-${dataDic[i].nombre}`
+        }
+        body+=`</option>`
     }
     return (body)
+}
+function validacion() {
+    
+    
 }
 
 // Funcion para Seleccionar Las KEYS

@@ -129,7 +129,7 @@ async function generarFormSubject(){
             </select>
             </select>
 
-            <label for = "Subject-classroom_id-input" >Programas: </label>
+            <label for = "Subject-classroom_id-input" >Salones: </label>
             <select id="Subject-classroom_id-input" class="form-select" aria-label="Default select example" required>
                 ${objectSelect(salones)}
             </select>
