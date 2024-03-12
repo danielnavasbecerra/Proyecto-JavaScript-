@@ -22,9 +22,15 @@ document.getElementById('form-students').addEventListener('click', newStudentFor
 // Subjects:
 document.getElementById('list-subjects').addEventListener('click', showSubjects);
 // document.getElementById("nav-subjects").addEventListener("click",subjectOptions);
-// document.getElementById("form-subjects").addEventListener("click",newSubjectForm);
+document.getElementById('form-subjects').addEventListener('click', newSubjectForm);
 
 // Enrollment:
 document.getElementById('list-enrollment').addEventListener("click", showEnrollment);
 // document.getElementById("nav-enrollment").addEventListener("click",tuitionOptions);
 // document.getElementById("new-enrollment").addEventListener("click",newTuitionForm);
+
+showPrograms()
+showDepartments()
+showCourses()
+showTeachers()
+showClassrooms()
