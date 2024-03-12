@@ -23,7 +23,7 @@ async function newSubjectForm(){
 }
 
 async function addSubject(){
-    const subjectList = await load("subjects");
+    const subjectList = await load("asignaturas");
 
     const courseIdInput = document.getElementById("Subject-course_id-input");
     const codeInput = document.getElementById("Subject-code-input");
@@ -41,30 +41,30 @@ async function addSubject(){
     const teacherId = teacherIdInput.value;
     const spaceAvailable = spaceAvailableInput.value;
     const programId = programIdInput.value;
-    const day = dayInput.value;
-    const hour = hourInput.value;
-    const classroomId = classroomIdInput.value;
-    const [startHour, enddHour] = hour.split(" ");
+    // const day = dayInput.value;
+    // const hour = hourInput.value;
+    // const classroomId = classroomIdInput.value;
+    // const [startHour, enddHour] = hour.split(" ");
 
     const newSubject = {
         "id": subjectList.length + 1,
-        "course_id": courseId,
-        "code": code,
-        "credits": credit,
-        "teacher_id": teacherId,
-        "space_available": spaceAvailable,
-        "program_id": programId,
-        "class_schedule": [
+        "curso_id": courseId,
+        "codigo": code,
+        "creditos": credit,
+        "profesor_id": teacherId,
+        "cupos_disponibles": spaceAvailable,
+        "programa_id": programId,
+        "horario_clases": [
             {
-              "day": day,
-              "start_hour": startHour,
-              "end_hour": enddHour,
-              "classroom_id": classroomId
+              "dia": 'day',
+              "hora_inicio": 'startHour',
+              "hora_fin": 'enddHour',
+              "salon_id": 'classroomId'
             }
         ]
     }
 
-    await save(newSubject,"subjects");
+    await save(newSubject,"asignaturas");
 
     courseIdInput.value ="";
     codeInput.value="";
@@ -136,7 +136,7 @@ async function generarFormSubject(){
 
             <br>
             
-            <button type = "button" class="btn btn-primary mt-2" onclick = "addSubject()">Agregar Docente</button>
+            <button type = "button" class="btn btn-primary mt-2" onclick="addSubject()">Agregar Asignatura</button>
     </form>
     `
    return formHTML

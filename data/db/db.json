@@ -1101,6 +1101,19 @@
       "fecha_nacimiento": "1997-12-24",
       "sexo": "Femenino",
       "programa_id": 10
+    },
+    {
+      "id": 51,
+      "nombre": "",
+      "apellido": "",
+      "tipo_documento": "",
+      "numero_documento": "",
+      "ciudad_residencia": "",
+      "direccion": "",
+      "telefono": "",
+      "fecha_nacimiento": "",
+      "sexo": "",
+      "programa_id": "1"
     }
   ],
   "cursos": [
@@ -1303,6 +1316,23 @@
           "hora_inicio": "10:00",
           "hora_fin": "12:00",
           "salon_id": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "curso_id": "1",
+      "codigo": "",
+      "creditos": "",
+      "profesor_id": "1",
+      "cupos_disponibles": "414141",
+      "programa_id": "1",
+      "horario_clases": [
+        {
+          "dia": "day",
+          "hora_inicio": "startHour",
+          "hora_fin": "enddHour",
+          "salon_id": "classroomId"
         }
       ]
     }
