@@ -27,10 +27,13 @@ document.getElementById('form-subjects').addEventListener('click', newSubjectFor
 // Enrollment:
 document.getElementById('list-enrollment').addEventListener("click", showEnrollment);
 // document.getElementById("nav-enrollment").addEventListener("click",tuitionOptions);
-// document.getElementById("new-enrollment").addEventListener("click",newTuitionForm);
+document.getElementById('form-enrollment').addEventListener("click",newEnrollmentForm);
 
 showPrograms()
 showDepartments()
 showCourses()
 showTeachers()
+showStudents()
 showClassrooms()
+showSubjects()
+showPeriods()

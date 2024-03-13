@@ -239,6 +239,8 @@ function objectSelect(dataDic) {
         body += `<option value="${dataDic[i].id}">${dataDic[i].id}`;
         if (dataDic[i].nombre){
             body += `-${dataDic[i].nombre}`
+        }else if(dataDic[i].codigo){
+            body += `-${dataDic[i].codigo}`
         }
         body+=`</option>`
     }

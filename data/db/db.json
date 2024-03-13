@@ -449,6 +449,14 @@
       "nombre": "Isabella",
       "apellido": "Mendoza",
       "departamento_id": 5
+    },
+    {
+      "id": 31,
+      "tipo_documento": "CC",
+      "numero_documetno": "1095301797",
+      "nombre": "Camilo",
+      "apellido": "pEREZ",
+      "departamento_id": "1"
     }
   ],
   "alumnos": [
@@ -1114,6 +1122,19 @@
       "fecha_nacimiento": "",
       "sexo": "",
       "programa_id": "1"
+    },
+    {
+      "id": 52,
+      "nombre": "Daniel ",
+      "apellido": "Navas",
+      "tipo_documento": "CC",
+      "numero_documento": "1095301797",
+      "ciudad_residencia": "Bucaramanga",
+      "direccion": "Cra1",
+      "telefono": "3148098258",
+      "fecha_nacimiento": "2005-09-14",
+      "sexo": "Masculino",
+      "programa_id": "3"
     }
   ],
   "cursos": [
@@ -1321,12 +1342,12 @@
     },
     {
       "id": 3,
-      "curso_id": "1",
-      "codigo": "",
-      "creditos": "",
+      "curso_id": "2",
+      "codigo": "ALG-LIN",
+      "creditos": "5",
       "profesor_id": "1",
-      "cupos_disponibles": "414141",
-      "programa_id": "1",
+      "cupos_disponibles": "3",
+      "programa_id": "3",
       "horario_clases": [
         {
           "dia": "day",
@@ -1351,6 +1372,13 @@
       "asignatura_id": 2,
       "periodo_id": 1,
       "precio": 3300
+    },
+    {
+      "id": 3,
+      "estudiante_id": "18",
+      "asignatura_id": "3",
+      "periodo_id": "2",
+      "precio": 4000
     }
   ]
 }
